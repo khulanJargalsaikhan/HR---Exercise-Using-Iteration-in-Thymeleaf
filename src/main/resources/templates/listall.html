@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List All</title>
+</head>
+<body>
+
+<!--check the size of array list-->
+
+<a th:href="@{/employeeform}">Add new employee</a>
+
+<h1>All Employees</h1>
+
+<div th:each="employee : ${employees}">
+    <p>ID: [[${employee.id}]]</p>
+    <p>Name: [[${employee.fname}]], [[${employee.lname}]]</p>
+</div>
+
+
+
+</body>
+</html>

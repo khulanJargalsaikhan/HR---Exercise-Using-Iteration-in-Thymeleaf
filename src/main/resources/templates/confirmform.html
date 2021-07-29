@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>confrim form</title>
+</head>
+<body>
+
+<a th:href="@{/listall}">List all employee</a>
+<a th:href="@{/employeeform}">Add new employee</a>
+
+<p th:inline="text">
+  ID: [[${employee.id}]] <br>
+  First Name: [[${employee.fname}]] <br>
+  Last Name: [[${employee.lname}]] <br>
+  Start Date: [[${employee.startDate}]] <br>
+</p>
+
+
+
+</body>
+</html>
