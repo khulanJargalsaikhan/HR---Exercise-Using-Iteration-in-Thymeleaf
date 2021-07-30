@@ -3,20 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>confrim form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<a th:href="@{/listall}">List all employee</a>
-<a th:href="@{/employeeform}">Add new employee</a>
+<!--<a th:href="@{/listall}">List all employee</a>-->
+<!--<a th:href="@{/employeeform}">Add new employee</a>-->
 
-<p th:inline="text">
-  ID: [[${employee.id}]] <br>
-  First Name: [[${employee.fname}]] <br>
-  Last Name: [[${employee.lname}]] <br>
-  Start Date: [[${employee.startDate}]] <br>
-</p>
+<!--<p th:inline="text">-->
+<!--  ID: [[${employee.id}]] <br>-->
+<!--  First Name: [[${employee.fname}]] <br>-->
+<!--  Last Name: [[${employee.lname}]] <br>-->
+<!--  Start Date: [[${employee.startDate}]] <br>-->
+<!--</p>-->
+
+<div class="container w-50">
+    <ul class="nav justify-content-center" style="background-color: grey;">
+        <li class="nav-item">
+            <a th:href="@{/listall}" class="nav-link active" style="color: white; " >List all employee</a>
+        </li>
+        <li class="nav-item">
+            <a th:href="@{/employeeform}" class="nav-link active" style="color: white">Add new employee</a>
+        </li>
+    </ul>
 
 
+    <ul th:inline="text" class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold"><b>ID:</b></div>
+                [[${employee.id}]]
+            </div>
+
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold"><b>First Name:</b> </div>
+                [[${employee.fname}]]
+            </div>
+
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold"><b>Last Name:</b></div>
+                [[${employee.lname}]]
+            </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold"><b>Start Date:</b> </div>
+                [[${employee.startDate}]]
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
